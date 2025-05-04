@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
-import { CalendarClock, MapPin, Pill, TestTube } from "lucide-react";
+import { CalendarClock, MapPin, Pill, TestTube, Stethoscope } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Dashboard() {

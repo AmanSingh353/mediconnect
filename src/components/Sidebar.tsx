@@ -1,13 +1,13 @@
 
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { CalendarClock, MapPin, Medkit, Pill, TestTube } from "lucide-react";
+import { CalendarClock, MapPin, Pill, TestTube, Stethoscope } from "lucide-react";
 
 const navigationItems = [
   {
     name: "Dashboard",
     href: "/",
-    icon: <Medkit className="h-5 w-5" />,
+    icon: <Stethoscope className="h-5 w-5" />,
   },
   {
     name: "Health Records",
@@ -39,7 +39,7 @@ export default function Sidebar() {
       <div className="flex h-16 items-center border-b border-sidebar-border px-6">
         <Link to="/" className="flex items-center gap-2">
           <div className="rounded-full bg-primary p-1">
-            <Medkit className="h-5 w-5 text-white" />
+            <Stethoscope className="h-5 w-5 text-white" />
           </div>
           <span className="text-lg font-semibold text-primary">MedicMind</span>
         </Link>
