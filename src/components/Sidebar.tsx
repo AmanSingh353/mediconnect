@@ -71,10 +71,10 @@ export default function Sidebar() {
       <div className="border-t border-sidebar-border p-4">
         <div className="flex items-center gap-3 rounded-md bg-sidebar-accent/50 px-3 py-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white">
-            JD
+            SS
           </div>
           <div>
-            <p className="text-sm font-medium">John Doe</p>
+            <p className="text-sm font-medium">savvysid</p>
             <p className="text-xs text-sidebar-foreground/70">Patient</p>
           </div>
         </div>

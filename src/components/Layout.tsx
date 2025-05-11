@@ -28,7 +28,7 @@ export default function Layout({ children }: LayoutProps) {
               </svg>
             </button>
             <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
-              <span className="text-sm font-medium">JD</span>
+              <span className="text-sm font-medium">SS</span>
             </div>
           </div>
         </header>
