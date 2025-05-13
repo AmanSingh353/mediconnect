@@ -10,6 +10,7 @@ import HealthRecords from "./components/HealthRecords";
 import MedicineOrder from "./components/MedicineOrder";
 import Reminders from "./components/Reminders";
 import NearbyDoctors from "./components/NearbyDoctors";
+import PregnancyTracker from "./components/PregnancyTracker";
 import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
@@ -51,6 +52,14 @@ const App = () => (
             element={
               <Layout>
                 <NearbyDoctors />
+              </Layout>
+            } 
+          />
+          <Route 
+            path="/pregnancy" 
+            element={
+              <Layout>
+                <PregnancyTracker />
               </Layout>
             } 
           />

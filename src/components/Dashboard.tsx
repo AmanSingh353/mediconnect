@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
-import { CalendarClock, MapPin, Pill, TestTube, Stethoscope } from "lucide-react";
+import { CalendarClock, MapPin, Pill, TestTube, Baby } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Dashboard() {
@@ -13,7 +13,7 @@ export default function Dashboard() {
         <p className="text-muted-foreground">Here's an overview of your health.</p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
         <DashboardCard
           title="Health Records"
           description="7 records available"
@@ -41,6 +41,13 @@ export default function Dashboard() {
           icon={<MapPin className="h-5 w-5" />}
           href="/doctors"
           color="bg-amber-50 text-amber-700"
+        />
+        <DashboardCard
+          title="Pregnancy Tracker"
+          description="Track your journey"
+          icon={<Baby className="h-5 w-5" />}
+          href="/pregnancy"
+          color="bg-pink-50 text-pink-700"
         />
       </div>
       
