@@ -41,7 +41,7 @@ export default function Sidebar() {
           <div className="rounded-full bg-primary p-1">
             <Stethoscope className="h-5 w-5 text-white" />
           </div>
-          <span className="text-lg font-semibold text-primary">MedicMind</span>
+          <span className="text-lg font-semibold text-primary">MediConnect</span>
         </Link>
       </div>
       <nav className="flex-1 overflow-y-auto p-4">

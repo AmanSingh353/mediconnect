@@ -16,9 +16,9 @@ export default function Layout({ children }: LayoutProps) {
         <header className="bg-white border-b h-16 flex items-center justify-between px-6 md:px-8">
           <div className="md:hidden flex items-center">
             <div className="rounded-full bg-primary p-1">
-              <span className="text-sm font-medium text-white">MM</span>
+              <span className="text-sm font-medium text-white">MC</span>
             </div>
-            <span className="ml-2 text-lg font-semibold text-primary">MedicMind</span>
+            <span className="ml-2 text-lg font-semibold text-primary">MediConnect</span>
           </div>
           <div className="flex items-center gap-4">
             <button className="rounded-full bg-muted p-2">
