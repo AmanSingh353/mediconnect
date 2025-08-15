@@ -88,7 +88,11 @@ export default {
 					800: '#065f46',
 					900: '#064e3b',
 					950: '#022c22',
-				}
+				},
+				emergency: 'hsl(var(--emergency))',
+				urgent: 'hsl(var(--urgent))',
+				routine: 'hsl(var(--routine))',
+				'low-priority': 'hsl(var(--low-priority))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

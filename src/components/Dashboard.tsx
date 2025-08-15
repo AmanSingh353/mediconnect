@@ -2,18 +2,27 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
-import { CalendarClock, MapPin, Pill, TestTube, Baby } from "lucide-react";
+import { CalendarClock, MapPin, Pill, TestTube, Baby, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
+import AiSymptomChecker from "./AiSymptomChecker";
 
 export default function Dashboard() {
   return (
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold tracking-tight">Welcome back, savvysid</h1>
-        <p className="text-muted-foreground">Here's an overview of your health.</p>
+        <p className="text-muted-foreground">Here's an overview of your health. Try our AI symptom checker for personalized health guidance.</p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-6">
+        <DashboardCard
+          title="AI Symptom Checker"
+          description="Get instant health guidance"
+          icon={<Bot className="h-5 w-5" />}
+          href="#"
+          color="bg-primary/10 text-primary"
+          isAiChecker
+        />
         <DashboardCard
           title="Health Records"
           description="7 records available"
@@ -33,23 +42,26 @@ export default function Dashboard() {
           description="2 reminders today"
           icon={<CalendarClock className="h-5 w-5" />} 
           href="/reminders"
-          color="bg-purple-50 text-purple-700"
+          color="bg-secondary/10 text-secondary"
         />
         <DashboardCard
           title="Nearby Doctors"
           description="5 doctors nearby"
           icon={<MapPin className="h-5 w-5" />}
           href="/doctors"
-          color="bg-amber-50 text-amber-700"
+          color="bg-accent/10 text-accent"
         />
         <DashboardCard
           title="Pregnancy Tracker"
           description="Track your journey"
           icon={<Baby className="h-5 w-5" />}
           href="/pregnancy"
-          color="bg-pink-50 text-pink-700"
+          color="bg-muted/50 text-muted-foreground"
         />
       </div>
+
+      {/* AI Symptom Checker Component */}
+      <AiSymptomChecker />
       
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <Card>
@@ -156,9 +168,24 @@ interface DashboardCardProps {
   icon: React.ReactNode;
   href: string;
   color: string;
+  isAiChecker?: boolean;
 }
 
-function DashboardCard({ title, description, icon, href, color }: DashboardCardProps) {
+function DashboardCard({ title, description, icon, href, color, isAiChecker }: DashboardCardProps) {
+  if (isAiChecker) {
+    return (
+      <Card className="transition-all duration-200 hover:shadow-md cursor-pointer border-primary/20 hover:border-primary/40">
+        <CardHeader className="pb-2">
+          <div className={`rounded-md w-fit p-2 ${color}`}>{icon}</div>
+        </CardHeader>
+        <CardContent>
+          <div className="text-lg font-semibold">{title}</div>
+          <p className="text-sm text-muted-foreground">{description}</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
   return (
     <Link to={href}>
       <Card className="transition-all duration-200 hover:shadow-md">
